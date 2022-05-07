@@ -23,7 +23,7 @@ public class UBlocks {
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Ubucraft.MODID);
 	
 	// Ores
-	public static final RegistryObject<Block> UBUNTU_ORE = BLOCKS.register("ubuntu_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(3.0F, 4.1F), UniformInt.of(4, 10)));
+	public static final RegistryObject<Block> UBUNTU_ORE = BLOCKS.register("ubuntu_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.0F).requiresCorrectToolForDrops().strength(3.0F, 4.1F), UniformInt.of(4, 10)));
 	
 	public static void registerUbucraftBlocks() {
 		BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
