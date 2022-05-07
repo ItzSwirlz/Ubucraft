@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "ubucraft:block/ubuntu_ore"
+	}
+}
