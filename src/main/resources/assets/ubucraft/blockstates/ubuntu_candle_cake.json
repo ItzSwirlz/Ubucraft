@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "ubucraft:block/ubuntu_candle_cake"
+    },
+    "lit=true": {
+      "model": "ubucraft:block/ubuntu_candle_cake_lit"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_two_candles",
+  "textures": {
+    "all": "ubucraft:block/ubuntu_candle",
+    "particle": "ubucraft:block/ubuntu_candle"
+  }
+}

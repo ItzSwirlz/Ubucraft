@@ -4,15 +4,13 @@ import com.github.ItzSwirlz.Ubucraft.Ubucraft;
 import com.github.ItzSwirlz.Ubucraft.items.UItems;
 
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.item.BedItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CandleBlock;
 import net.minecraft.world.level.block.OreBlock;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
@@ -36,14 +34,18 @@ public class UBlocks {
 	/* ----------------------- */
 	
 	// Beds
-	// Registry issues are causing the textures to not work. To avoid problems, leave this for now.
+	// Registry issues are causing the textures to not work. To avoid problems, leave this for now. (BlockEntityTypes)
 	//public static final RegistryObject<Block> UBUNTU_BED = BLOCKS.register("ubuntu_bed", () -> new UBedBlock(15291424, BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOD).strength(0.2F).noOcclusion()));
-	
+
+	// Candles
+	public static final RegistryObject<Block> UBUNTU_CANDLE = BLOCKS.register("ubuntu_candle", () -> new CandleBlock(BlockBehaviour.Properties.of(Material.DECORATION).noOcclusion().strength(0.1F).sound(SoundType.CANDLE).lightLevel(CandleBlock.LIGHT_EMISSION)));
+
 	public static void registerUbucraftBlocks() {
 		BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
 		
 		// Block Items
 		registerUbucraftBlockItem("ubuntu_ore", UBUNTU_ORE, CreativeModeTab.TAB_MATERIALS);
+		registerUbucraftBlockItem("ubuntu_candle", UBUNTU_CANDLE, CreativeModeTab.TAB_DECORATIONS);
 		
 		// Irregular Block Registries
 		//UItems.ITEMS.register("ubuntu_bed", () -> new BedItem(UBUNTU_BED.get(), (new Item.Properties()).stacksTo(1).tab(CreativeModeTab.TAB_DECORATIONS)));
