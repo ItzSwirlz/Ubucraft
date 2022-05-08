@@ -9,6 +9,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.HoeItem;
+import net.minecraft.world.item.HorseArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShovelItem;
@@ -56,6 +57,9 @@ public class UItems {
 	/* --------- */
 	//   Armor   //
 	/* --------- */
+	
+	// Horse Armor
+	public static final RegistryObject<Item> UBUNTU_HORSE_ARMOR = ITEMS.register("ubuntu_horse_armor", () -> new HorseArmorItem(10, "ubuntu", (new Item.Properties()).stacksTo(1).tab(CreativeModeTab.TAB_MISC)));
 	
 	// Helmets
 	public static final RegistryObject<Item> UBUNTU_HELMET = ITEMS.register("ubuntu_helmet", () -> new ArmorItem(UArmorMaterials.UBUNTU, EquipmentSlot.HEAD, (new Item.Properties()).tab(CreativeModeTab.TAB_COMBAT)));
